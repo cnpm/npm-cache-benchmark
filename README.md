@@ -1,4 +1,4 @@
-# npm vs shrinkpack vs npm5 vs yarn
+# npm vs shrinkpack vs npm5 vs yarn vs npminstall
 
 Benchmarks of [npm][1], [npm5][2], [shrinkpack][3], [yarn][4] and [npminstall][5] install times.
 

@@ -1,6 +1,6 @@
 {
   "name": "npm-cache-benchmark",
-  "description": "Benchmark npm cache vs shrinkpack vs yarn",
+  "description": "Benchmark npm cache vs shrinkpack vs yarn vs npminstall",
   "version": "2.0.0",
   "authors": [
     "Jamie Mason (https://github.com/JamieMason)",
