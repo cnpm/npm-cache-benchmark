@@ -45,8 +45,10 @@ function runAll() {
 }
 
 function runBenchmark(installer, args, directory) {
-  // taobao npm registry
-  args.push('--registry=https://registry.npm.taobao.org');
+  if (process.env.npm_china) {
+    // taobao npm registry
+    args.push('--registry=https://registry.npm.taobao.org');
+  }
 
   const key = `${installer}/${directory}`;
   const dirPath = path.resolve(directory);
