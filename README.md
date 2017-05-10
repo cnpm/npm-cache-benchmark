@@ -4,28 +4,27 @@ Benchmarks of [npm][1], [npm5][2], [shrinkpack][3], [yarn][4] and [npminstall][5
 
 ## Results
 
-### OS X
+### Travis CI Ubuntu
 
 | Installer | Average over 5 runs |
 |:--|--:|
-| npm 5.x (shrinkpacked) | 10.80s |
-| npm 5.x (shrinkpacked, compressed) | 10.82s |
-| npm 5.x (cached) | 13.42s |
-| yarn --offline | 13.43s |
-| npm 5.x | 14.21s |
-| yarn | 18.90s |
-| npm 4.x (shrinkpacked, compressed) | 19.42s |
-| npm 4.x (shrinkpacked) | 19.81s |
-| npm 4.x (cached) | 24.79s |
-| npm 4.x | 28.03s |
-| npminstall 3.x (cached) | 24.79s |
-| npminstall 3.x | 28.03s |
+| npminstall 3.x (cached) | 9.13s |
+| npminstall 3.x | 9.32s |
+| npm 5.x (shrinkpacked, compressed) | 10.50s |
+| npm 5.x | 12.46s |
+| yarn --offline | 13.39s |
+| yarn | 14.31s |
+| npm 5.x (cached) | 14.38s |
+| npm 4.x (cached) | 15.83s |
+| npm 4.x | 16.32s |
+| npm 4.x (shrinkpacked) | 19.85s |
+| npm 4.x (shrinkpacked, compressed) | 20.25s |
 
 ## Running the Benchmarks
 
 ### Locally
 
-```
+```bash
 git clone https://github.com/cnpm/npm-cache-benchmark.git
 cd npm-cache-benchmark
 npm install
@@ -34,70 +33,77 @@ npm start
 
 ## Full Results
 
-### OS X
+### Travis CI Ubuntu
+
+https://travis-ci.org/cnpm/npm-cache-benchmark/jobs/230666504#L769
 
 ```
 $ npm start
 
 Run 1
-npm 4.x: 28.77s (average 28.77s)
-npm 4.x (cached): 23.47s (average 23.47s)
-npm 4.x (shrinkpacked): 19.64s (average 19.64s)
-npm 4.x (shrinkpacked, compressed): 19.87s (average 19.87s)
-yarn: 19.87s (average 19.87s)
-yarn --offline: 12.77s (average 12.77s)
-npm 5.x: 14.96s (average 14.96s)
-npm 5.x (cached): 14.48s (average 14.48s)
-npm 5.x (shrinkpacked): 15.38s (average 15.38s)
-npm 5.x (shrinkpacked, compressed): 14.22s (average 14.22s)
+npm 4.x: 15.35s (average 15.35s)
+npm 4.x (cached): 15.92s (average 15.92s)
+npm 4.x (shrinkpacked): 18.90s (average 18.90s)
+npm 4.x (shrinkpacked, compressed): 19.92s (average 19.92s)
+yarn: 15.23s (average 15.23s)
+yarn --offline: 14.07s (average 14.07s)
+npm 5.x: 12.25s (average 12.25s)
+npm 5.x (cached): 20.80s (average 20.80s)
+npm 5.x (shrinkpacked, compressed): 11.77s (average 11.77s)
+npminstall 3.x: 8.47s (average 8.47s)
+npminstall 3.x (cached): 9.03s (average 9.03s)
 
 Run 2
-npm 4.x: 29.52s (average 29.14s)
-npm 4.x (cached): 25.86s (average 24.66s)
-npm 4.x (shrinkpacked): 21.02s (average 20.33s)
-npm 4.x (shrinkpacked, compressed): 20.55s (average 20.21s)
-yarn: 19.59s (average 19.73s)
-yarn --offline: 13.51s (average 13.14s)
-npm 5.x: 14.07s (average 14.52s)
-npm 5.x (cached): 11.26s (average 12.87s)
-npm 5.x (shrinkpacked): 7.63s (average 11.50s)
-npm 5.x (shrinkpacked, compressed): 8.07s (average 11.15s)
+npm 4.x: 15.83s (average 15.59s)
+npm 4.x (cached): 15.63s (average 15.77s)
+npm 4.x (shrinkpacked): 19.55s (average 19.22s)
+npm 4.x (shrinkpacked, compressed): 19.64s (average 19.78s)
+yarn: 13.54s (average 14.38s)
+yarn --offline: 12.79s (average 13.43s)
+npm 5.x: 11.94s (average 12.09s)
+npm 5.x (cached): 11.80s (average 16.30s)
+npm 5.x (shrinkpacked, compressed): 10.03s (average 10.90s)
+npminstall 3.x: 8.46s (average 8.47s)
+npminstall 3.x (cached): 8.10s (average 8.57s)
 
 Run 3
-npm 4.x: 26.86s (average 28.38s)
-npm 4.x (cached): 24.51s (average 24.61s)
-npm 4.x (shrinkpacked): 19.35s (average 20.01s)
-npm 4.x (shrinkpacked, compressed): 18.84s (average 19.75s)
-yarn: 18.47s (average 19.31s)
-yarn --offline: 12.09s (average 12.79s)
-npm 5.x: 13.90s (average 14.31s)
-npm 5.x (cached): 13.79s (average 13.18s)
-npm 5.x (shrinkpacked): 10.35s (average 11.12s)
-npm 5.x (shrinkpacked, compressed): 10.69s (average 10.99s)
+npm 4.x: 14.83s (average 15.34s)
+npm 4.x (cached): 15.40s (average 15.65s)
+npm 4.x (shrinkpacked): 18.85s (average 19.10s)
+npm 4.x (shrinkpacked, compressed): 19.95s (average 19.84s)
+yarn: 14.12s (average 14.29s)
+yarn --offline: 13.72s (average 13.53s)
+npm 5.x: 12.09s (average 12.09s)
+npm 5.x (cached): 13.66s (average 15.42s)
+npm 5.x (shrinkpacked, compressed): 10.84s (average 10.88s)
+npminstall 3.x: 10.10s (average 9.01s)
+npminstall 3.x (cached): 9.15s (average 8.76s)
 
 Run 4
-npm 4.x: 27.78s (average 28.23s)
-npm 4.x (cached): 24.69s (average 24.63s)
-npm 4.x (shrinkpacked): 19.06s (average 19.77s)
-npm 4.x (shrinkpacked, compressed): 18.72s (average 19.49s)
-yarn: 17.92s (average 18.96s)
-yarn --offline: 13.95s (average 13.08s)
-npm 5.x: 13.61s (average 14.14s)
-npm 5.x (cached): 13.69s (average 13.31s)
-npm 5.x (shrinkpacked): 10.33s (average 10.92s)
-npm 5.x (shrinkpacked, compressed): 10.53s (average 10.88s)
+npm 4.x: 20.20s (average 16.55s)
+npm 4.x (cached): 17.04s (average 16.00s)
+npm 4.x (shrinkpacked): 21.10s (average 19.60s)
+npm 4.x (shrinkpacked, compressed): 21.75s (average 20.32s)
+yarn: 14.23s (average 14.28s)
+yarn --offline: 13.69s (average 13.57s)
+npm 5.x: 14.70s (average 12.74s)
+npm 5.x (cached): 14.61s (average 15.22s)
+npm 5.x (shrinkpacked, compressed): 10.12s (average 10.69s)
+npminstall 3.x: 9.05s (average 9.02s)
+npminstall 3.x (cached): 9.32s (average 8.90s)
 
 Run 5
-npm 4.x: 27.22s (average 28.03s)
-npm 4.x (cached): 25.44s (average 24.79s)
-npm 4.x (shrinkpacked): 20.00s (average 19.81s)
-npm 4.x (shrinkpacked, compressed): 19.13s (average 19.42s)
-yarn: 18.65s (average 18.90s)
-yarn --offline: 14.81s (average 13.43s)
-npm 5.x: 14.51s (average 14.21s)
-npm 5.x (cached): 13.88s (average 13.42s)
-npm 5.x (shrinkpacked): 10.30s (average 10.80s)
-npm 5.x (shrinkpacked, compressed): 10.60s (average 10.82s)
+npm 4.x: 15.38s (average 16.32s)
+npm 4.x (cached): 15.15s (average 15.83s)
+npm 4.x (shrinkpacked): 20.87s (average 19.85s)
+npm 4.x (shrinkpacked, compressed): 20.00s (average 20.25s)
+yarn: 14.43s (average 14.31s)
+yarn --offline: 12.68s (average 13.39s)
+npm 5.x: 11.32s (average 12.46s)
+npm 5.x (cached): 11.03s (average 14.38s)
+npm 5.x (shrinkpacked, compressed): 9.75s (average 10.50s)
+npminstall 3.x: 10.50s (average 9.32s)
+npminstall 3.x (cached): 10.04s (average 9.13s)
 ```
 
 <!-- links -->
